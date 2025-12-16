@@ -237,6 +237,7 @@ body {
 #lightbox-close-icon:hover { opacity: 0.8; }
 /* --- Responsive Logic --- */
 @media (max-width: 768px) {
+    html { font-size: 90%; }
     body { padding: 1.5rem 1rem; }
     .top-section { flex-direction: column; gap: var(--gap-row); }
     .bottom-section { display: flex; flex-direction: column; gap: var(--gap-row); }
