@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>windy blue.</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dekko&family=EB+Garamond:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Top Section -->
+    <div class="top-section">
+        
+        <!-- LEFT COLUMN -->
+        <div class="col-left">
+            <!-- Header -->
+            <div class="card header-box header-card-wrapper">
+                <div class="font-header">windy blue.</div>
+            </div>
+
+            <!-- Year End Goal -->
+            <div class="card goal-card-wrapper">
+                <div class="font-title card-header">year end goal</div>
+                <div class="inner-box goal-list">
+                    <div class="goal-item">
+                        <div class="checkbox"></div>
+                        <div class="font-body">Get 90/100 in Math</div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="checkbox"></div>
+                        <div class="font-body">Get scholarship in JSC exam</div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="checkbox"></div>
+                        <div class="font-body">Read 10 books</div>
+                    </div>
+                    <div class="goal-item">
+                        <div class="checkbox"></div>
+                        <div class="font-body">Do more programming</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Art Section -->
+            <div class="card art-card-wrapper">
+                <div class="font-title card-header">curated art</div>
+                <div class="inner-box art-inner">
+                    <div class="art-grid">
+                        <div class="art-placeholder" data-full="art/jousting.jpeg">
+                            <span class="art-text">Jousting</span>
+                        </div>
+                        <div class="art-placeholder" data-full="art/crow.jpeg">
+                            <span class="art-text">Crow</span>
+                        </div>
+                        <div class="art-placeholder" data-full="art/bird.jpeg">
+                            <span class="art-text">Bird</span>
+                        </div>
+                        <div class="art-placeholder" data-full="art/ranger.jpeg">
+                            <span class="art-text">Ranger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-right">
+            <!-- Music Player -->
+            <div class="card music-card-wrapper">
+                <div class="inner-box">
+                    <div class="music-info">
+                        <div>
+                            <div class="font-song" id="song-title">Into The Unknown</div>
+                            <div class="font-body" id="song-artist">Aurora</div>
+                        </div>
+                        <div class="music-icon">♫</div>
+                    </div>
+                </div>
+                
+                <audio id="audio-player" preload="none"></audio>
+
+                <div class="music-controls">
+                    <button class="control-btn" id="prev-btn">prev.</button>
+                    <button class="control-btn" id="play-btn">play</button>
+                    <button class="control-btn" id="next-btn">next</button>
+                </div>
+            </div>
+
+            <!-- Journal -->
+            <div class="card journal-card-wrapper">
+                <div class="font-title card-header">journal</div>
+                <div class="inner-box journal-box-inner list-content font-body">
+                <ul>
+                    <li>16 Dec 2025 - Made this website!</li>
+                </ul>
+            </div>
+            </div>
+
+            <!-- Quote -->
+            <div class="quote-container">
+                <div class="quote-text">
+                    “After all this<br>time? Always”
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="bottom-section">
+        <!-- Books -->
+        <div class="card books-card-wrapper">
+            <div class="font-title card-header">books</div>
+            <div class="inner-box list-box-inner list-content font-body">
+                <ul>
+                    <li>1. Good Girl's Guide Series<br>- Holly Jackson</li>
+                    <li>2. The Diary of a Young Girl<br>- Anne Frank</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Movies -->
+        <div class="card movies-card-wrapper">
+            <div class="font-title card-header">movies</div>
+            <div class="inner-box list-box-inner list-content font-body">
+                <ul>
+                    <li>1. Harry Potter Series</li>
+                    <li>2. The Martian</li>
+                    <li>3. Iron Man Triology</li>
+                    <li>4. Doctor Strange</li>
+                    <li>5. Spider-man Home Triology</li>
+                    <li>6. Superman</li>
+                    <li>7. The Fantastic Four: First Steps</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Games -->
+        <div class="card games-card-wrapper">
+            <div class="font-title card-header">games</div>
+            <div class="inner-box list-box-inner list-content font-body">
+                <ul>
+                    <li>1. Minecraft</li>
+                    <li>2. Dude Theft Wars</li>
+                    <li>3. Walk Master</li>
+                    <li>4. Roblox</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Lightbox Modal -->
+<div id="lightbox">
+    <div id="lightbox-close-icon">X</div>
+    <img id="lightbox-img" src="" alt="Full Res">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
