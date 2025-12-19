@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Invisible Student</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lora:ital,wght@0,400;0,700;1,400&family=Oswald:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="windyblu.png">
+    <style>
+        /* General Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #fffbf4;
+            font-family: 'Lora', serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        /* Magazine Page Container */
+        .magazine-page {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgb(255, 247, 224);
+            padding: 60px;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        /* Top Navigation/Header bar */
+        .top-header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 18px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .top-header span { color: #2a5ca0; margin-left: 20px; display: flex; align-items: center;}
+        .top-header span::before {
+            content: "";
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: #999;
+            margin-right: 8px;
+        }
+
+        /* Layout Grid */
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        /* Image Placeholders */
+        .image-placeholder {
+            background-color: #f0f0f0;
+            border: 1px dashed #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-style: italic;
+            width: 100%;
+            min-height: 400px;
+            overflow: hidden;
+        }
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Typography */
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #2a5ca0;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 22px;
+            color: #555;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .author-line {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-align: right;
+            border-top: 2px solid #000;
+            padding-top: 5px;
+        }
+
+        /* Multi-column Body Text */
+        .content-columns {
+            column-count: 2;
+            column-gap: 40px;
+            text-align: justify;
+            font-size: 16px;
+        }
+
+        /* The Drop Cap (The big 'I') */
+        .drop-cap::first-letter {
+            font-family: 'Playfair Display', serif;
+            float: left;
+            font-size: 100px;
+            line-height: 0.8;
+            padding-top: 4px;
+            padding-right: 12px;
+            padding-left: 3px;
+            color: #000;
+        }
+        a {
+            color:#2a5ca0;
+            text-decoration: none;
+        }
+        p { margin-bottom: 20px; }
+
+        /* Sidebar/Secondary Image area */
+        .secondary-image-box {
+            margin-top: 30px;
+            break-inside: avoid; /* Prevents splitting across columns */
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            border-top: 1px solid #000;
+            padding-top: 10px;
+            display: flex;
+            justify-content: flex-end;
+            font-family: 'Oswald', sans-serif;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section { grid-template-columns: 1fr; }
+            .content-columns { column-count: 1; }
+            h1 { font-size: 32px; }
+            .magazine-page { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="magazine-page">
+    <!-- Header like the "Arte Livros" bar -->
+    <header class="top-header">
+        <span>Lifestyle</span>
+        <span>Education</span>
+        <span>Stories</span>
+    </header>
+
+    <div class="hero-section">
+        <!-- Main Image Placeholder (Like the Van Gogh art) -->
+        <div class="image-placeholder">
+            <img src="art/treeflower.jpg">
+        </div>
+
+        <div>
+            <h1>The Secret Freedom of Being the "Invisible" Student</h1>
+            <p class="subtitle">My friends are smart and talented. I am just… me. Here is why that might actually be a good thing.</p>
+            
+            <div class="author-line">By <a href="index.html">Windy Blu</a> | DECEMBER 2025</div>
+
+            <div class="content-columns">
+                <p class="drop-cap">If you walked into my classroom right now, you would notice the "star" students immediately. They are the ones the teachers smile at. They are the ones who get their papers held up as examples of perfection.</p>
+                
+                <p>Then, there is me. I am the student sitting in the middle row. My hand isn't raised high. My homework is… fine. It’s not a masterpiece, it’s just done. For a long time, I wondered if I was falling behind. Why didn't I have that one amazing special talent that made everyone gasp?</p>
+
+                <p>But recently, I realized something important. While some of my friends are busy carrying the heavy weight of expectations, I am doing something they can't do: I am quietly enjoying my life.</p>
+
+                <!-- Small Secondary Image Placeholder inside text -->
+                <div class="secondary-image-box">
+                    <div class="image-placeholder" style="min-height: 200px;">
+                        <img src="art/birdread.jpg">
+                    </div>
+                    <p style="font-size: 12px; font-style: italic; margin-top: 5px;">"The freedom of being average allows for the beauty of experimentation."</p>
+                </div>
+
+                <p>Let me introduce you to my group. First, there is my artist friend. She is actually really good at drawing — way better than me — but she doesn't let it stress her out. We are kind of a team. We sit together, joking around and making fun of things, whispering our motto: "We listen and we don't judge" (even though we are totally judging, just a little bit).</p>
+
+                <p>But then, there is our other friend, the "English Dictionary." She is incredible at English. Her grammar is perfect, and she knows words I’ve never even heard of. But honestly? I feel bad for her sometimes.</p>
+
+                <p>When the teacher asks a really difficult question and the whole class is silent, everyone — including the teacher — automatically stares at her. The pressure is always on her to save the class. If I say a word wrong, nobody cares. But if she says a word wrong, everyone looks shocked.</p>
+
+                <p>Do you see the pattern? When you are labeled "The Best," you lose the freedom to make mistakes. You are standing on a pedestal, and the only place to go is down. This is where I come in. I am not the best speaker; sometimes I stutter. I am not the Math Whiz. I am not the Human Calculator.</p>
+
+                <p>And because of that, I am free. When I draw a picture, nobody cares if it looks weird. I can draw a purple cow if I want to! I do it because it’s funny, not because the teacher is grading my soul.</p>
+
+                <p>Being "average" means the world allows you to experiment. It allows you to be a beginner. It allows you to have a bad day without anyone making a big deal out of it. So, this is my new website. It is not a place for perfection. It is not a place where I will show you my trophies, because I don't have many.</p>
+
+                <p>Instead, this website is for the rest of us. It is for the students who try hard but don't always get the A. My friends might be the "stars" of the school, but I have realized that being in the audience is actually pretty fun.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Footer -->
+    <footer>
+        STUDENT LIFE | DECEMBER, 2025 | PAGE 01
+    </footer>
+</div>
+
+</body>
+</html>
